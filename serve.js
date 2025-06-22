@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const cors = require('cors');
 
 app.use(express.json());
+app.use(cors());    
+
+//Configuração do servidor
+const port = 3000;
 
 //Dados em memória 
 
@@ -14,7 +18,8 @@ let tasks = [
 
 //GET/Tasks - lista todas as tarefas
 
-app.get('/tasks', (req, res) =>{
+app.get('/', (req, res) =>{
+    res.send('Bem-vindo à API de tarefas!');
     res.json(tasks);
 });
 
@@ -39,7 +44,7 @@ app.post('/tasks', (req, res) => {
 //PUT/tasks/:id - atualizar uma tarefa 
 app.put('/tasks/:id', (req, res) =>{
     const task = tasks.find( t => t.id === parseInt(req.params.id));
-    if (!task) return res.status(404).json({message: "Tarefa não encontradad"});
+    if (!task) return res.status(404).json({message: "Tarefa não encontrada"});
 
     task.title = req.body.title ?? task.title;
     task.completed = req.body.completed ?? task.completed;
@@ -58,5 +63,5 @@ app.delete('/tasks/:id', (req, res) => {
     
 //Iniciar o servidor
 app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+    console.log("Servidor rodando em http://localhost:3000");
 });
