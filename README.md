@@ -29,17 +29,4 @@ Cria uma nova tarefa a partir dos dados enviados no corpo da requisição (JSON)
   "completed": false
 }
 
-## Testes da API
-
-### Requisição GET
-![GET](imgs/get.png)
-
-### Requisição POST
-![POST](imgs/post.png)
-
-### Requisição PUT
-![PUT](imgs/put.png)
-
-### Requisição DELETE
-![DELETE](imgs/delete.png)
 
