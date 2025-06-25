@@ -1,8 +1,23 @@
-# 📋 Projeto: API de Tarefas com Node.js
+# 📋 Meu primeiro Projeto: API de Tarefas com Node.js
 
 Este é um projeto de API REST criada com **Node.js** e **Express**, que simula o gerenciamento de tarefas usando dados armazenados na memória (array de objetos). A API permite listar, detalhar, criar, atualizar e deletar tarefas.
 
 ---
+## Testes da API
+
+### Requisição GET
+![GET](imgs/get.png)
+
+### Requisição POST
+![POST](imgs/post.png)
+
+### Requisição PUT
+![PUT](imgs/put.png)
+
+### Requisição DELETE
+![DELETE](imgs/delete.png)
+
+
 
 ## 🚀 Funcionalidades da API
 
